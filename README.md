@@ -11,10 +11,9 @@ Summary: The Splunk distribution of OpenTelemetry Python Instrumentation provide
 
 Development: https://github.com/signalfx/splunk-otel-python
 
-Documentation: https://github.com/signalfx/splunk-otel-python
+Documentation: https://docs.splunk.com/observability/en/gdi/get-data-in/application/python/get-started.html
 
 This package provides entrypoints to configure OpenTelemetry.
-
 
 Current build status
 ====================
