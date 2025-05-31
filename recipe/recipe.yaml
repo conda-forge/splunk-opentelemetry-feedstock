@@ -7,8 +7,8 @@ context:
   python_min: '3.9'
   python_max: '4.0'
   python_test_max: '3.13'
-  opentelemetry_api_version: '1.32.1'
-  opentelemetry_instrumentation_version: '0.53b1'
+  opentelemetry_api_version: '1.33.1'
+  opentelemetry_instrumentation_version: '0.54b1'
 
 package:
   name: ${{ name|lower }}
