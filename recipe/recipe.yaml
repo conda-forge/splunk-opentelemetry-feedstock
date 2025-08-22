@@ -3,12 +3,12 @@ schema_version: 1
 
 context:
   name: splunk-opentelemetry
-  version: "2.6.0"
+  version: "2.7.0"
   python_min: '3.9'
   python_max: '4.0'
   python_test_max: '3.13'
-  opentelemetry_api_version: '1.35.0'
-  opentelemetry_instrumentation_version: '0.56b0'
+  opentelemetry_api_version: '1.36.0'
+  opentelemetry_instrumentation_version: '0.57b0'
 
 package:
   name: ${{ name|lower }}
@@ -16,7 +16,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name | replace("-", "_") }}/${{ name | replace("-", "_") }}-${{ version }}.tar.gz
-  sha256: 91ff32267356770c7658959f61a1ac97fbc14303e2775610b90574394c5366f7
+  sha256: e337deed010ab44993c3faa13ec86213e1f340545bdc8957bcc28409856660ca
 
 build:
   number: 0
