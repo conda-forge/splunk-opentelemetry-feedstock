@@ -4,7 +4,7 @@ schema_version: 1
 context:
   name: splunk-opentelemetry
   version: "2.8.0"
-  python_min: '3.9'
+  python_min: '3.10'
   python_max: '4.0'
   python_test_max: '3.13'
   opentelemetry_api_version: '1.38.0'
