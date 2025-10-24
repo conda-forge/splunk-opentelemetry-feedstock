@@ -3,20 +3,19 @@ schema_version: 1
 
 context:
   name: splunk-opentelemetry
-  version: "2.7.0"
-  python_min: '3.9'
+  version: "2.8.0"
   python_max: '4.0'
-  python_test_max: '3.13'
-  opentelemetry_api_version: '1.36.0'
-  opentelemetry_instrumentation_version: '0.57b0'
+  python_test_max: '3.14'
+  opentelemetry_api_version: '1.38.0'
+  opentelemetry_instrumentation_version: '0.59b0'
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name | replace("-", "_") }}/${{ name | replace("-", "_") }}-${{ version }}.tar.gz
-  sha256: e337deed010ab44993c3faa13ec86213e1f340545bdc8957bcc28409856660ca
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/splunk_opentelemetry-${{ version }}.tar.gz
+  sha256: 901a430e1500ac3bdc5158dfd5ced923597fae9f138bed89e8cac5973123de2b
 
 build:
   number: 0
@@ -38,6 +37,7 @@ requirements:
     - opentelemetry-instrumentation ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-instrumentation-system-metrics ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-semantic-conventions ==${{ opentelemetry_instrumentation_version }}
+    - protobuf >=6.31.1
 
 tests:
   - python:
