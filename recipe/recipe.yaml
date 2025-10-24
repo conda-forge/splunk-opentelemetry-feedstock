@@ -7,8 +7,8 @@ context:
   python_min: '3.9'
   python_max: '4.0'
   python_test_max: '3.13'
-  opentelemetry_api_version: '1.36.0'
-  opentelemetry_instrumentation_version: '0.57b0'
+  opentelemetry_api_version: '1.38.0'
+  opentelemetry_instrumentation_version: '0.59b0'
 
 package:
   name: ${{ name|lower }}
@@ -38,6 +38,7 @@ requirements:
     - opentelemetry-instrumentation ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-instrumentation-system-metrics ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-semantic-conventions ==${{ opentelemetry_instrumentation_version }}
+    - protobuf >=6.31.1
 
 tests:
   - python:
