@@ -4,10 +4,11 @@ schema_version: 1
 context:
   name: splunk-opentelemetry
   version: "2.9.0"
+  python_min: '3.10'
   python_max: '4.0'
   python_test_max: '3.14'
-  opentelemetry_api_version: '1.38.0'
-  opentelemetry_instrumentation_version: '0.59b0'
+  opentelemetry_api_version: '1.39.1'
+  opentelemetry_instrumentation_version: '0.60b1'
 
 package:
   name: ${{ name|lower }}
