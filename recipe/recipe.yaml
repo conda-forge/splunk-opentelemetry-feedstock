@@ -10,7 +10,6 @@ context:
   opentelemetry_api_version: '1.44.0'
   opentelemetry_instrumentation_version: '0.65b0'
 
-
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
