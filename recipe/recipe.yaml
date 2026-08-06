@@ -43,7 +43,6 @@ requirements:
     - protobuf >=6.33.5
     - wrapt >=2.2.2
 
-
 tests:
   - python:
       imports:
