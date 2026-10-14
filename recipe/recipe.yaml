@@ -3,12 +3,10 @@ schema_version: 1
 
 context:
   name: splunk-opentelemetry
-  version: "2.12.1"
-  python_min: '3.10'
+  version: "2.13.2"
   python_max: '4.0'
-  python_test_max: '3.14'
-  opentelemetry_api_version: '1.44.0'
-  opentelemetry_instrumentation_version: '0.65b0'
+  opentelemetry_api_version: '1.45.1'
+  opentelemetry_instrumentation_version: '0.66b1'
 
 package:
   name: ${{ name|lower }}
@@ -16,7 +14,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/splunk_opentelemetry-${{ version }}.tar.gz
-  sha256: a76590faeceaf8dcfc8a261927de7d27794dd8570d61e79b9fb4f750bcce63b9
+  sha256: 5dd176707ddb971d1175c92370ef7682e3d7a9ead183ac13b7c5635131e9ff8c
 
 build:
   number: 0
@@ -39,25 +37,19 @@ requirements:
     - opentelemetry-instrumentation-logging ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-instrumentation-system-metrics ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-semantic-conventions ==${{ opentelemetry_instrumentation_version }}
-    - opentelemetry-opamp-client ==0.3b0
+    - opentelemetry-opamp-client ==0.4b0
     - protobuf >=6.33.5
-    - wrapt >=2.2.2
+    - wrapt >=2.5.2
 
 
 tests:
   - python:
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
       imports:
         - splunk_otel
       pip_check: true
-      python_version:
-        - ${{ python_min }}.*
-        - ${{ python_test_max }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
 
 about:
   summary: The Splunk distribution of OpenTelemetry Python Instrumentation provides a Python agent that automatically instruments your Python application to capture and report distributed traces to SignalFx APM.
