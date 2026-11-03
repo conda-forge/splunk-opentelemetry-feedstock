@@ -13,7 +13,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/splunk_opentelemetry-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/splunk_opentelemetry-${{ version }}.tar.gz
   sha256: 5dd176707ddb971d1175c92370ef7682e3d7a9ead183ac13b7c5635131e9ff8c
 
 build:
