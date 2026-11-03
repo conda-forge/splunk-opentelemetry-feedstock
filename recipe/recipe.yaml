@@ -33,6 +33,7 @@ requirements:
     - opentelemetry-propagator-b3 ==${{ opentelemetry_api_version }}
     - opentelemetry-exporter-otlp-proto-grpc ==${{ opentelemetry_api_version }}
     - opentelemetry-exporter-otlp-proto-http ==${{ opentelemetry_api_version }}
+    - opentelemetry-configuration ==0.66b1
     - opentelemetry-instrumentation ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-instrumentation-logging ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-instrumentation-system-metrics ==${{ opentelemetry_instrumentation_version }}
