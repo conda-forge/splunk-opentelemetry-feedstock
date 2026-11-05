@@ -41,7 +41,7 @@ requirements:
     - opentelemetry-semantic-conventions ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-opamp-client ==0.4b0
     - protobuf >=6.33.5
-    - wrapt >=2.5.1
+    - wrapt >=2.5.2
     - opentelemetry-instrumentation-system-metrics ==0.66b1
     - opentelemetry-sdk ==1.45.1
     - opentelemetry-configuration ==0.66b1
