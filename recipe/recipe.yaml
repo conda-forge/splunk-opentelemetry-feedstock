@@ -3,9 +3,9 @@ schema_version: 1
 
 context:
   name: splunk-opentelemetry
-  version: "2.13.3"
-  opentelemetry_api_version: '1.45.1'
-  opentelemetry_instrumentation_version: '0.66b1'
+  version: 2.13.3
+  opentelemetry_api_version: 1.45.1
+  opentelemetry_instrumentation_version: 0.66b1
 
 package:
   name: ${{ name|lower }}
@@ -39,7 +39,7 @@ requirements:
     - opentelemetry-semantic-conventions ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-opamp-client ==0.4b0
     - protobuf >=6.33.5
-    - requests>=2.33.0
+    - requests >=2.33.0
     - wrapt >=2.5.2
 
 
