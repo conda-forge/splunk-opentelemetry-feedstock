@@ -4,8 +4,8 @@ schema_version: 1
 context:
   name: splunk-opentelemetry
   version: 2.14.0
-  opentelemetry_api_version: 1.45.1
-  opentelemetry_instrumentation_version: 0.66b1
+  opentelemetry_api_version: 1.45.2
+  opentelemetry_instrumentation_version: 0.66b2
 
 package:
   name: ${{ name|lower }}
@@ -27,12 +27,13 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
+    - jsonschema >=4.26.0
     - opentelemetry-api ==${{ opentelemetry_api_version }}
     - opentelemetry-sdk ==${{ opentelemetry_api_version }}
     - opentelemetry-propagator-b3 ==${{ opentelemetry_api_version }}
     - opentelemetry-exporter-otlp-proto-grpc ==${{ opentelemetry_api_version }}
     - opentelemetry-exporter-otlp-proto-http ==${{ opentelemetry_api_version }}
-    - opentelemetry-configuration ==0.66b2
+    - opentelemetry-configuration ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-instrumentation ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-instrumentation-logging ==${{ opentelemetry_instrumentation_version }}
     - opentelemetry-instrumentation-system-metrics ==${{ opentelemetry_instrumentation_version }}
@@ -41,16 +42,6 @@ requirements:
     - protobuf >=6.33.5
     - requests >=2.33.0
     - wrapt >=2.5.2
-    - opentelemetry-exporter-otlp-proto-grpc ==1.45.2
-    - opentelemetry-propagator-b3 ==1.45.2
-    - opentelemetry-instrumentation-logging ==0.66b2
-    - opentelemetry-sdk ==1.45.2
-    - opentelemetry-instrumentation-system-metrics ==0.66b2
-    - opentelemetry-api ==1.45.2
-    - opentelemetry-semantic-conventions ==0.66b2
-    - opentelemetry-instrumentation ==0.66b2
-    - opentelemetry-exporter-otlp-proto-http ==1.45.2
-    - jsonschema >=4.26.0
 tests:
   - python:
       python_version:
